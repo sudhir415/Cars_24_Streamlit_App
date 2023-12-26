@@ -3,9 +3,7 @@ import numpy as np
 import streamlit as st
 import datetime
 import pickle 
-# import sklearn
 
-#cars_df = pd.read_csv("/Users/sudhirmalik/Documents/Scaler class notes/MLOPS/Streamlit/Cars_24_Streamlit_App/cars24-car-price.csv") 
 
 cars_df = pd.read_csv("./cars24-car-price.csv") 
 
@@ -34,7 +32,7 @@ def model_pred(year, seller_type, km_driven, fuel_type, transmission_type, milea
 
 col1, col2 = st.columns(2) 
 
-fuel_type = col1.selectbox("Select fule type", 
+fuel_type = col1.selectbox("Select fuel type", 
                            ["Diesel", "Petrol", "CNG", "LPG", "Electric"])
 
 transmission_type = col1.selectbox("Select transmission type",
