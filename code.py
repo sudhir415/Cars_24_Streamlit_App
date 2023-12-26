@@ -3,7 +3,7 @@ import numpy as np
 import streamlit as st
 import datetime
 import pickle 
-import sklearn
+# import sklearn
 
 #cars_df = pd.read_csv("/Users/sudhirmalik/Documents/Scaler class notes/MLOPS/Streamlit/Cars_24_Streamlit_App/cars24-car-price.csv") 
 
