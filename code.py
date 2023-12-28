@@ -43,15 +43,15 @@ seats = col1.selectbox("No. of Seats",
 seller_type = col1.selectbox("Choose the seller type", 
                              ['Dealer', 'Individual', 'Trustmark Dealer']) 
 
-engine = col2.slider("Set the engine power",
-                        500, 5000, step=100) 
-year = col2.slider("Set the year", 2005.0, 2020.0, step= 1.0) 
+engine = col2.slider("Set the engine capacity in CC",
+                        800, 5000, step=100) 
+year = col2.slider("Set the year", 2007.0, 2020.0, step= 1.0) 
 
 km_driven = col2.slider("Set the km_driven", 10000, 100000, step= 1000)
 
 mileage = col2.slider("Set the mileage", 5.0, 30.0, step= 1.0)
 
-max_power = col2.slider("Power in HP select", 50.0, 200.0, step= 10.0)
+max_power = col2.slider("Set the power in HP", 50.0, 200.0, step= 10.0)
 
 
 if(st.button("Predict Price")):
@@ -59,7 +59,7 @@ if(st.button("Predict Price")):
     transmission_type = encode_dict['transmission_type'][transmission_type]
     seller_type = encode_dict["seller_type"][seller_type]
     price = model_pred(year, seller_type, km_driven, fuel_type, transmission_type, mileage, engine, max_power,seats)
-    st.text("Predicted price of the car: "+ str(price)) 
+    st.text("Predicted price of the car in Lakhs: "+ str(price)) 
 
 
 
